@@ -1,0 +1,152 @@
+
+local EuphoriaHub = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Button = Instance.new("ImageButton")
+local TextBox = Instance.new("TextBox")
+local open = false
+
+EuphoriaHub.Name = "EuphoriaHub"
+EuphoriaHub.Parent = game.CoreGui
+
+Frame.Parent = EuphoriaHub
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0, 0, -1, 0)
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+Button.Name = "Button"
+Button.Parent = Frame
+Button.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Button.BackgroundTransparency = 1.000
+Button.Position = UDim2.new(0.24645932, 0, 0.109233774, 0)
+Button.Size = UDim2.new(0, 973, 0, 86)
+Button.Image = "rbxassetid://2790390993"
+Button.ImageColor3 = Color3.fromRGB(35, 35, 35)
+Button.ScaleType = Enum.ScaleType.Slice
+Button.SliceCenter = Rect.new(16, 16, 240, 240)
+
+TextBox.Parent = Button
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.Position = UDim2.new(0.0246659815, 0, 0, 0)
+TextBox.Size = UDim2.new(1, 0, 1, 0)
+TextBox.Font = Enum.Font.GothamBlack
+TextBox.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+TextBox.PlaceholderText = "Command Here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(178, 178, 178)
+TextBox.TextSize = 34.000
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+
+wait(5)
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Euphoria V2 - FE";
+	Text = "Loaded | Left Alt To Open | Insert To Inject";
+	Duration = "6";
+})
+
+local uis = game:GetService("UserInputService")
+
+uis.InputBegan:Connect(function(u1,u2)
+	if not u2 and u1.KeyCode == Enum.KeyCode.LeftAlt then
+	if open == false then
+		Frame:TweenPosition(UDim2.new(0,0,0,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		open = true
+	elseif open == true then
+		Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		open = false
+		end	
+	end
+end)
+
+uis.InputBegan:Connect(function(u1,u2)
+	if not u2 and u1.KeyCode == Enum.KeyCode.Insert then
+	if open == true then
+if TextBox.Text == ',krystal' then
+		loadstring(game:HttpGetAsync("https://pastebin.com/raw/FV3HLmTH"))()	
+		end
+if TextBox.Text == ',neptunian' then
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/mememasterboi/a-lot-of-scripts/master/Obfuscate%20Template.txt'),true))()
+		end
+if TextBox.Text == ',joy' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/LEAQuKj0"))()
+		end
+if TextBox.Text == ',meme' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/0QfjMKrF"))()
+		end
+if TextBox.Text == ',trash' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/LHRiFVYm"))()
+		end
+if TextBox.Text == ',invis' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/U3DKSSe0"))()
+		end
+if TextBox.Text == ',drone' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/GriadDUx"))()
+		end
+if TextBox.Text == ',r15dance' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/x9BkBh0m"))()
+		end
+if TextBox.Text == ',dog' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/H0fCpUYQ"))()															
+		end
+if TextBox.Text == ',stand' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/RZ4v0S3M"))()												
+		end
+if TextBox.Text == ',cmds' then											
+			print('Euphoria V2 - FE | CMDS')
+			print(',krystal -- dances')
+			print(',neptunian -- neptunian sword')
+			print(',joy -- dances')
+			print(',meme -- meme dances')
+			print(',trash -- turn into a trashcan')
+			print(',invis -- cant see me')
+			print(',drone -- gives drone')
+			print(',chill -- get chill af')
+			print(',dog -- dog animations')
+			print(',r15dance -- r15 dances')
+			print(',stand -- gives stand')
+			print(',fload -- floats hats')
+			print(',r6anims -- r6 animations')
+			print(',blockspam -- spams blocks')
+			print(',repui -- gives replicated ui NOT FE')
+			print(',sonic -- fasto')
+			print(',neko -- meow uwu')
+			print(',grabknife -- gives knife')
+			print(',cmds')
+		end
+if TextBox.Text == ',btools' then											
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/rRY8XQcK"))()
+		end
+if TextBox.Text == ',chill' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/u7AqCjm9"))()
+		end
+if TextBox.Text == ',fload' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/11DggnXq"))()
+		end		
+if TextBox.Text == ',r6anims' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/qbexdLb3"))()
+		end		
+if TextBox.Text == ',blockspam' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/uC4Bh7GU"))()
+		end		
+if TextBox.Text == ',repui' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/Mn5WF6d9"))()
+		end		
+if TextBox.Text == ',grabknife' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/hjxmLWiy"))()
+		end		
+if TextBox.Text == ',sonic' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/7gKphrd8"))()
+		end		
+if TextBox.Text == ',neko' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/dUV7QWMi"))()
+		end		
+		end
+	end	
+end)
+
+
+
+
+
