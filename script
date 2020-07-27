@@ -127,7 +127,6 @@ if TextBox.Text == ',cmds' then
 			print(',grabknife -- gives knife')
 			print(',ender')
 			print(',killbot')
-			print(',sonic2')
 			print(',gun')
 			print(',xester')
 			print(',elio')
@@ -163,13 +162,9 @@ if TextBox.Text == ',grabknife' then
 			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end		
 if TextBox.Text == ',sonic' then
-			loadstring(game:HttpGetAsync("https://pastebin.com/raw/7gKphrd8"))()
-			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
-		end	
-if TextBox.Text == ',sonic2' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/SyF5t70A"))()
 			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
-		end		
+		end			
 if TextBox.Text == ',neko' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/YLfR8Qx9"))()
 			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
