@@ -109,10 +109,11 @@ if TextBox.Text == ',cmds' then
 			print(',fload -- floats hats')
 			print(',r6anims -- r6 animations')
 			print(',blockspam -- spams blocks')
-			print(',r15fling -- spams blocks')
+			print(',r15fling -- fling')
 			print(',repui -- gives replicated ui NOT FE')
 			print(',sonic -- fasto')
 			print(',neko -- meow uwu')
+			print(',pgun -- guno moveo uwu')
 			print(',grabknife -- gives knife')
 			print(',cmds')
 		end
@@ -145,7 +146,10 @@ if TextBox.Text == ',neko' then
 		end
 if TextBox.Text == ',r15fling' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/6HUVD7gH"))()
-		end		
+		end
+if TextBox.Text == ',pgun' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/qCca8reg"))()
+		end			
 		end
 	end	
 end)
