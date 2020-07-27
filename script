@@ -64,34 +64,44 @@ uis.InputBegan:Connect(function(u1,u2)
 	if not u2 and u1.KeyCode == Enum.KeyCode.Insert then
 	if open == true then
 if TextBox.Text == ',krystal' then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/FV3HLmTH"))()	
+		loadstring(game:HttpGetAsync("https://pastebin.com/raw/FV3HLmTH"))()
+		Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',neptunian' then
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/mememasterboi/a-lot-of-scripts/master/Obfuscate%20Template.txt'),true))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',joy' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/LEAQuKj0"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',meme' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/0QfjMKrF"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',trash' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/LHRiFVYm"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',invis' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/U3DKSSe0"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',drone' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/GriadDUx"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',r15dance' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/x9BkBh0m"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',dog' then
-			loadstring(game:HttpGetAsync("https://pastebin.com/raw/H0fCpUYQ"))()															
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/H0fCpUYQ"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',stand' then
-			loadstring(game:HttpGetAsync("https://pastebin.com/raw/RZ4v0S3M"))()												
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/RZ4v0S3M"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',cmds' then											
 			print('Euphoria V2 - FE | CMDS')
@@ -115,41 +125,87 @@ if TextBox.Text == ',cmds' then
 			print(',neko -- meow uwu')
 			print(',pgun -- guno moveo uwu')
 			print(',grabknife -- gives knife')
+			print(',ender')
+			print(',killbot')
+			print(',sonic2')
+			print(',gun')
+			print(',xester')
+			print(',elio')
 			print(',cmds')
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',btools' then											
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/rRY8XQcK"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',chill' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/u7AqCjm9"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',fload' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/11DggnXq"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end		
 if TextBox.Text == ',r6anims' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/qbexdLb3"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end		
 if TextBox.Text == ',blockspam' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/uC4Bh7GU"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end		
 if TextBox.Text == ',repui' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/Mn5WF6d9"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end		
 if TextBox.Text == ',grabknife' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/hjxmLWiy"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end		
 if TextBox.Text == ',sonic' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/7gKphrd8"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		end	
+if TextBox.Text == ',sonic2' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/SyF5t70A"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end		
 if TextBox.Text == ',neko' then
-			loadstring(game:HttpGetAsync("https://pastebin.com/raw/dUV7QWMi"))()
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/YLfR8Qx9"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',r15fling' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/6HUVD7gH"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 if TextBox.Text == ',pgun' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/qCca8reg"))()
-		end			
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		end
+if TextBox.Text == ',gun' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/0Jv3udmi"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		end	
+if TextBox.Text == ',xester' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/RPwyPvEi"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		end
+if TextBox.Text == ',elio' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/xvBXu6Yc"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		end
+if TextBox.Text == ',ender' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/hv190Xiq"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		end
+if TextBox.Text == ',killbot' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/G24tcRXA"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		end
+if TextBox.Text == ',ender' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/hv190Xiq"))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
+		end		
 		end
 	end	
 end)
