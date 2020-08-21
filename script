@@ -200,7 +200,10 @@ if TextBox.Text == ',killbot' then
 if TextBox.Text == ',ender' then
 			loadstring(game:HttpGetAsync("https://pastebin.com/raw/hv190Xiq"))()
 			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
-		end		
+		end
+if TextBox.Text == ',reanimate' then
+			loadstring(game:HttpGetAsync("https://pastebin.com/raw/1gtL7mSE", true))()
+			Frame:TweenPosition(UDim2.new(0,0,-1,0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,.5)
 		end
 	end	
 end)
