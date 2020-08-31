@@ -100,11 +100,7 @@ local headers = {
 ["content-type"] = "application/json"
 }
 
-local f = "https://raw.githubusercontent.com/miruluv/euphoia/master/Exodus_Whitelist"
-local ff = game:HttpGetAsync(f, true)
-local fwad = game.Players.LocalPlayer
-if string.find(ff, fwad.UserId) then 
-	local exodus_ui = Instance.new("ScreenGui")
+local exodus_ui = Instance.new("ScreenGui")
 	local Loading = Instance.new("ImageButton")
 	local Logo = Instance.new("TextLabel")
 	local LINE = Instance.new("ImageButton")
@@ -637,9 +633,8 @@ if string.find(ff, fwad.UserId) then
 			runcommand()
 		end
 	end)
-else
 	fwad:Kick('Nice Try You Skid XD')
-end
+
 local function a(a,b,c,d,cgf,gsrhyfj,dw,daw,r,rg,rg)
 	local a={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
 	local b={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
